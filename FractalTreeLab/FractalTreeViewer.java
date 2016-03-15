@@ -1,24 +1,17 @@
-//********************************************************************
-//  KochSnowflakeViewer.java       Author: Lewis/Loftus/Cocking
-//
-//  Demonstrates the use of recursion.
-//  @gcschmit (19 July 2014): converted from an applet to an application
-//********************************************************************
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class KochSnowflakeViewer implements ActionListener
+public class FractalTreeViewer implements ActionListener
 {
-    private final int WIDTH = 400;
-    private final int HEIGHT = 500;
+    private final int WIDTH = 700;
+    private final int HEIGHT = 700;
 
     private final int MIN = 1, MAX = 20;
 
     private JButton increase, decrease;
     private JLabel titleLabel, orderLabel;
-    private KochPanel drawing;
+    private FractalPanel drawing;
     private JPanel panel, tools;
     private JFrame frame;
 
@@ -27,10 +20,10 @@ public class KochSnowflakeViewer implements ActionListener
     //-----------------------------------------------------------------
     public static void main(String[] args)
     {
-        KochSnowflakeViewer viewer = new KochSnowflakeViewer();
+         FractalTreeViewer viewer = new  FractalTreeViewer();
     }
 
-    public KochSnowflakeViewer()
+    public FractalTreeViewer()
     {
         tools = new JPanel ();
         tools.setLayout (new BoxLayout(tools, BoxLayout.X_AXIS));
@@ -59,14 +52,14 @@ public class KochSnowflakeViewer implements ActionListener
         tools.add (Box.createHorizontalStrut (20));
         tools.add (orderLabel);
 
-        drawing = new KochPanel (1);
+        drawing = new FractalPanel (1);
 
         panel = new JPanel();
         panel.add (tools);
         panel.add (drawing);
 
         frame = new JFrame();
-        frame.setTitle("Knoch Snowflake");
+        frame.setTitle("Fractal Tree");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(WIDTH, HEIGHT);
         frame.add(panel);
