@@ -3,18 +3,19 @@ import java.awt.Graphics;
 import javax.swing.JFrame;
 import java.applet.Applet;
 
-public class FractalTree extends JFrame {
-
-    public FractalTree() {
+public class FractalTree extends JFrame 
+{
+    public FractalTree()
+    {
         super("Fractal Tree");
         setBounds(100, 100, 800, 600);
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setBackground(Color.BLACK);
+        //FractalTree.getContentPane().setBackground( Color.BLACK );
     }
 
-    private void drawTree(Graphics g, int x1, int y1, double angle, int depth) {
-        
+    private void drawTree(Graphics g, int x1, int y1, double angle, int depth)
+    {
         if (depth == 0) 
         {
             return;
@@ -30,11 +31,10 @@ public class FractalTree extends JFrame {
     public void paint(Graphics g) 
     {
         super.paint(g);
-        g.setColor(Color.GREEN);
+        g.setColor(Color.RED);
         drawTree(g, 400, 500, -90, 9);
     }
 
-    
     public static void main(String[] args)
     {
         new FractalTree().setVisible(true);
