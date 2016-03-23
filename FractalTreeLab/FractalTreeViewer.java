@@ -1,3 +1,4 @@
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -29,17 +30,8 @@ public class FractalTreeViewer
         tools.setLayout (new BoxLayout(tools, BoxLayout.X_AXIS));
         tools.setBackground (Color.yellow);
         tools.setOpaque (true);
-
-        titleLabel = new JLabel ("The Koch Snowflake");
-        titleLabel.setForeground (Color.black);
-
-        orderLabel = new JLabel ("Order: 1");
-        orderLabel.setForeground (Color.black);
-
-        tools.add (titleLabel);
         tools.add (Box.createHorizontalStrut (20));
         tools.add (Box.createHorizontalStrut (20));
-        tools.add (orderLabel);
 
         drawing = new FractalPanel (1);
 
