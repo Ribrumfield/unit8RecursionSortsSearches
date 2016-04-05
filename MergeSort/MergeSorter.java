@@ -8,9 +8,12 @@ public class MergeSorter
       Sorts an array, using merge sort.
       @param a the array to sort
    */
-   public static void sort(int[] a)
+   public static void sort(String[] a)
    {  
-      if (a.length <= 1) { return; }
+      if (a.length <= 1) 
+      {
+          return;
+      }
       int[] first = new int[a.length / 2];
       int[] second = new int[a.length - first.length];
       // Copy the first half of a into first, the second half into second
@@ -26,7 +29,7 @@ public class MergeSorter
       sort(second);
       merge(first, second, a);
    }
-
+   
    /**
       Merges two sorted arrays into an array
       @param first the first sorted array

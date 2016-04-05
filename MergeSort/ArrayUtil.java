@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Arrays;
 
 /**
    This class contains utility methods for array manipulation.
@@ -14,26 +15,31 @@ public class ArrayUtil
       @return an array filled with length numbers between
       0 and n - 1
    */
-   public static int[] randomIntArray(int length, int n)
+   public static String[] randomStringArray(String length, String n)
    {  
-      int[] a = new int[length];      
-      for (int i = 0; i < a.length; i++)
+      String[] a = new String[length];      
+      for (String i = 0; i < a.length; i++)
       {
-         a[i] = generator.nextInt(n);
+         //a[i] = generator.nextInt(n);
       }
       
       return a;
    }
-
+   
+   public static String RandomString(int numChar)
+   {
+       int RandNum = (int)(Math.Random()*26);
+   }
+   
    /**
       Swaps two entries of an array.
       @param a the array
       @param i the first position to swap
       @param j the second position to swap
    */
-   public static void swap(int[] a, int i, int j)
+   public static void swap(String[] a, String i, String j)
    {
-      int temp = a[i];
+      String temp = a[i];
       a[i] = a[j];
       a[j] = temp;
    }
