@@ -15,21 +15,17 @@ public class ArrayUtil
       @return an array filled with length numbers between
       0 and n - 1
    */
-   public static String[] randomStringArray(String length, String n)
+   public static int[] randomIntArray(int length, int n)
    {  
-      String[] a = new String[length];      
-      for (String i = 0; i < a.length; i++)
+      int[] a = new int[length];      
+      for (int i = 0; i < a.length; i++)
       {
-         //a[i] = generator.nextInt(n);
+         a[i] = generator.nextInt(n);
       }
-      
       return a;
    }
    
-   public static String RandomString(int numChar)
-   {
-       int RandNum = (int)(Math.Random()*26);
-   }
+   
    
    /**
       Swaps two entries of an array.
@@ -37,9 +33,9 @@ public class ArrayUtil
       @param i the first position to swap
       @param j the second position to swap
    */
-   public static void swap(String[] a, String i, String j)
+   public static void swap(int[] a, int i, int j)
    {
-      String temp = a[i];
+      int temp = a[i];
       a[i] = a[j];
       a[j] = temp;
    }

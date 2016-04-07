@@ -8,7 +8,7 @@ public class MergeSorter
       Sorts an array, using merge sort.
       @param a the array to sort
    */
-   public static void sort(String[] a)
+   public static void sort(int[] a)
    {  
       if (a.length <= 1) 
       {
@@ -58,7 +58,6 @@ public class MergeSorter
          }
          j++;
       }
-
       // Note that only one of the two loops below copies entries
       // Copy any remaining entries of the first array
       while (iFirst < first.length) 
